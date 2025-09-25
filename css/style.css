@@ -160,7 +160,7 @@
         
         /* Hero Section */
         .hero {
-            background-image: url('/img/IMG_4770.PNG');
+            background-image: url('img/IMG_4770.PNG');
             background-size: cover;
             background-position: center;
             color: white;
@@ -496,4 +496,5 @@
                 border-radius: 4px;
                 padding: 15px;
             }
+
         }
