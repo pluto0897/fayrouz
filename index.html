@@ -9,45 +9,72 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="img/IMG_4709.PNG" alt="Fayrouz Logo">
+ <!-- Header -->
+<!-- Header -->
+<!-- Header -->
+<header>
+    <div class="container header-container">
+        <!-- الشعار على اليسار -->
+        <div class="logo">
+            <img src="img/IMG_4709.PNG" alt="Fayrouz Logo">
+        </div>
+        
+        <!-- القائمة في المنتصف -->
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#" data-translate="home">Home</a></li>
+                <li><a href="#featured-products" data-translate="shop">Shop</a></li>
+                <li><a href="#categories" data-translate="categories">Categories</a></li>
+                <li><a href="#about" data-translate="about">About</a></li>
+                <li><a href="#contact" data-translate="contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- الأيقونات على اليمين -->
+        <div class="nav-icons">
+            <div id="search-icon" title="Search">
+                <i class="fas fa-search"></i>
             </div>
-            
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#featured-products">Shop</a></li>
-                    <li><a href="#categories">Categories</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                
-                <!-- Mobile Auth Section will be added here by JavaScript -->
-            </nav>
-            
-            <div class="nav-icons">
-                <div id="search-icon"><i class="fas fa-search"></i></div>
-                <div class="user-icon"><i class="fas fa-user"></i></div>
-                <div id="cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
+            <div class="user-icon" title="Account">
+                <i class="fas fa-user"></i>
+            </div>
+            <div id="cart-icon" title="Cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <!-- زر تحويل اللغة -->
+            <div class="language-switcher" id="languageSwitcher" title="Change Language">
+                <div class="current-language">
+                    <img src="https://flagcdn.com/w20/us.png" srcset="https://flagcdn.com/w40/us.png 2x" width="20" alt="English" class="flag-icon">
+                    <span class="language-text">EN</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="language-options">
+                    <div class="language-option" data-lang="en">
+                        <img src="https://flagcdn.com/w20/us.png" srcset="https://flagcdn.com/w40/us.png 2x" width="20" alt="English" class="flag-icon">
+                        <span class="language-text">English</span>
+                    </div>
+                    <div class="language-option" data-lang="ar">
+                        <img src="https://flagcdn.com/w20/sa.png" srcset="https://flagcdn.com/w40/sa.png 2x" width="20" alt="Arabic" class="flag-icon">
+                        <span class="language-text">العربية</span>
+                    </div>
                 </div>
             </div>
-            
-            <div class="mobile-menu-btn" id="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
-    </header>
+        
+        <!-- زر القائمة المتنقلة -->
+        <div class="mobile-menu-btn" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
     
 
     <!-- Search Modal -->
     <div class="search-modal" id="searchModal">
         <div class="search-container">
             <div class="search-header">
-                <h3>Search Products</h3>
+                <h3 data-translate="search-products">Search Products</h3>
                 <div class="close-search" id="closeSearch">
                     <i class="fas fa-times"></i>
                 </div>
@@ -145,9 +172,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <h2>Discover the Finest Spices & Food Products</h2>
-            <p>Experience the authentic flavors of the Middle East with our premium selection of spices and gourmet foods</p>
-            <a href="#featured-products" class="btn">Shop Now</a>
+            <h2 data-translate="hero-title">Discover the Finest Spices & Food Products</h2>
+            <p data-translate="hero-subtitle">Experience the authentic flavors of the Middle East with our premium selection of spices and gourmet foods</p>
+            <a href="#featured-products" class="btn" data-translate="shop-now">Shop Now</a>
         </div>
     </section>
 
@@ -155,8 +182,8 @@
     <section class="featured-products" id="featured-products">
         <div class="container">
             <div class="section-title">
-                <h2>Featured Products</h2>
-                <p>Our most popular and exclusive items</p>
+                <h2 data-translate="featured-products">Featured Products</h2>
+                <p data-translate="featured-desc">Our most popular and exclusive items</p>
             </div>
             
             <div class="products-grid" id="productsGrid">
@@ -164,7 +191,7 @@
             </div>
             
             <div style="text-align: center; margin-top: 40px;">
-                <a href="#" class="btn">View All Products</a>
+                <a href="#" class="btn" data-translate="view-all">View All Products</a>
             </div>
         </div>
     </section>
@@ -173,8 +200,8 @@
     <section class="categories" id="categories">
         <div class="container">
             <div class="section-title">
-                <h2>Shop By Category</h2>
-                <p>Explore our diverse range of products</p>
+                <h2 data-translate="shop-categories">Shop By Category</h2>
+                <p data-translate="categories-desc">Explore our diverse range of products</p>
             </div>
             
             <div class="categories-grid" id="categoriesGrid">
@@ -187,11 +214,11 @@
     <section class="about" id="about">
         <div class="container">
             <div class="about-content">
-                <h2>Our Story</h2>
+                <h2 data-translate="our-story">Our Story</h2>
                 <p>Fayrouz began as a small family business in 1985, when our founder brought traditional spice blends from the Middle East to share with the local community. What started as a passion for authentic flavors has grown into a trusted source for premium spices and food products.</p>
                 <p>We carefully source our products from sustainable farms and trusted suppliers, ensuring that every item meets our high standards for quality and authenticity. Our team is dedicated to bringing you the very best flavors from around the world.</p>
                 <p>Today, Fayrouz continues to be a family-owned business, with the same commitment to quality and customer satisfaction that we started with over three decades ago.</p>
-                <a href="#" class="btn">Learn More</a>
+                <a href="#" class="btn" data-translate="learn-more">Learn More</a>
             </div>
             <div class="about-image">
                 <img src="https://images.unsplash.com/photo-1587334274328-64186a80aeee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Our Spice Shop">
@@ -203,8 +230,8 @@
     <section class="testimonials">
         <div class="container">
             <div class="section-title">
-                <h2>What Our Customers Say</h2>
-                <p>Authentic experiences from our community</p>
+                <h2 data-translate="testimonials">What Our Customers Say</h2>
+                <p data-translate="testimonials-desc">Authentic experiences from our community</p>
             </div>
             
             <div class="testimonials-grid" id="testimonialsGrid">
@@ -216,11 +243,11 @@
     <!-- Newsletter -->
     <section class="newsletter" id="contact">
         <div class="container">
-            <h2>Subscribe to Our Newsletter</h2>
-            <p>Stay updated with our latest products, exclusive offers, and cooking tips</p>
+            <h2 data-translate="newsletter">Subscribe to Our Newsletter</h2>
+            <p data-translate="newsletter-desc">Stay updated with our latest products, exclusive offers, and cooking tips</p>
             <form class="newsletter-form" id="newsletterForm">
                 <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
-                <button type="submit">Subscribe</button>
+                <button type="submit" data-translate="subscribe">Subscribe</button>
             </form>
         </div>
     </section>
@@ -233,53 +260,53 @@
                     <h3>Fayrouz</h3>
                     <p>Bringing authentic flavors to your kitchen since 1985. Quality spices and food products for culinary enthusiasts and professional chefs alike.</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/share/1AKrfwJVF5/" target="_blank" title="Go To facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/fayrouzfoodseg?igsh=MXZ3cXVnbDBqMHFqdw==" target="_blank" title="Go To Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="http://tiktok.com/@fayrouzfoodseg" target="_blank" title="Go To TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Shop</h3>
+                    <h3 data-translate="shop">Shop</h3>
                     <ul>
-                        <li><a href="#">All Products</a></li>
-                        <li><a href="#">Spices</a></li>
-                        <li><a href="#">Herbs</a></li>
-                        <li><a href="#">Condiments</a></li>
-                        <li><a href="#">Teas</a></li>
+                        <li><a href="#" data-translate="all-products">All Products</a></li>
+                        <li><a href="#" data-translate="spices">Spices</a></li>
+                        <li><a href="#" data-translate="herbs">Herbs</a></li>
+                        <li><a href="#" data-translate="condiments">Condiments</a></li>
+                        <li><a href="#" data-translate="teas">Teas</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Company</h3>
+                    <h3 data-translate="company">Company</h3>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Sustainability</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#" data-translate="about-us">About Us</a></li>
+                        <li><a href="#" data-translate="our-story-footer">Our Story</a></li>
+                        <li><a href="#" data-translate="sustainability">Sustainability</a></li>
+                        <li><a href="#" data-translate="careers">Careers</a></li>
+                        <li><a href="#" data-translate="contact-us">Contact Us</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Customer Service</h3>
+                    <h3 data-translate="customer-service">Customer Service</h3>
                     <ul>
-                        <li><a href="#">Shipping & Returns</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#" data-translate="shipping-returns">Shipping & Returns</a></li>
+                        <li><a href="#" data-translate="faq">FAQ</a></li>
+                        <li><a href="#" data-translate="terms">Terms & Conditions</a></li>
+                        <li><a href="#" data-translate="privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-translate="cookies">Cookie Policy</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Contact Info</h3>
+                    <h3 data-translate="contact-info">Contact Info</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 16 King Street, Al Falaki, Al Seyouf, Alexandria, Egypt</li>
-                        <li><i class="fas fa-phone"></i> +20 1031771166</li>
-                        <li><i class="fas fa-envelope"></i> fayrouzfoods@.com</li>
-                        <li><i class="fas fa-clock"></i> Always Open</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Spice Street, Cairo, Egypt</li>
+                        <li><i class="fas fa-phone"></i> +20 123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@fayrouz.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM-5PM</li>
                     </ul>
                 </div>
             </div>
@@ -298,7 +325,7 @@
     <!-- Cart Modal -->
     <div class="cart-modal" id="cartModal">
         <div class="cart-header">
-            <h3>Your Cart</h3>
+            <h3 data-translate="your-cart">Your Cart</h3>
             <div class="close-cart" id="closeCart">
                 <i class="fas fa-times"></i>
             </div>
@@ -307,16 +334,26 @@
             <!-- Cart items will be dynamically added here -->
         </div>
         <div class="cart-total">
-            <span>Total:</span>
+            <span data-translate="total">Total:</span>
             <span id="cartTotal">$0.00</span>
         </div>
         <div class="cart-actions">
-            <button class="checkout-btn">Proceed to Checkout</button>
+            <button class="checkout-btn" data-translate="checkout">Proceed to Checkout</button>
         </div>
     </div>
     
     <!-- Overlay for modal -->
     <div class="overlay" id="overlay"></div>
+
+    <!-- Floating Contact Icons for Mobile -->
+    <div class="floating-contact-icons">
+        <a href="tel:+201234567890" class="floating-icon floating-phone">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/201234567890" target="_blank" class="floating-icon floating-whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
     
     <script src="index.js"></script>
 </body>
